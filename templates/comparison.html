@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Comparison Across All E-commerce Sites</h1>
+    <div class="graph-container">
+        <img src="{{ url_for('static', filename='graphs/comparison.png') }}" alt="Comparative Graph">
+    </div>
+    <div class="button-group">
+        <a href="/download_report"><button>Download Report</button></a>
+        <a href="/analyze"><button>Back to Analyze</button></a>
+    </div>
+</body>
+</html>

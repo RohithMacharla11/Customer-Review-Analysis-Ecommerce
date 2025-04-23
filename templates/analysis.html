@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% if not platform %}
+        <h1>Select an E-commerce Site</h1>
+        <div class="platform-buttons">
+            {% for plat in platforms %}
+                <a href="/analyze/{{ plat }}"><button>{{ plat.capitalize() }}</button></a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h1>Analysis for {{ platform.capitalize() }}</h1>
+        <div class="graph-container">
+            <img src="{{ url_for('static', filename='graphs/' + platform + '_bar.png') }}" alt="Bar Chart">
+            <img src="{{ url_for('static', filename='graphs/' + platform + '_pie.png') }}" alt="Pie Chart">
+            <img src="{{ url_for('static', filename='graphs/' + platform + '_line.png') }}" alt="Line Chart">
+        </div>
+        <div class="button-group">
+            <a href="/analyze"><button>Back to Analyze</button></a>
+            <a href="/"><button>Back to Home</button></a>
+            <a href="/compare"><button>Compare All Sites</button></a>
+            <a href="/download_platform_report/{{ platform }}"><button>Download Report</button></a>
+        </div>
+    {% endif %}
+</body>
+</html>
