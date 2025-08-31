@@ -5,7 +5,6 @@ E commerce sentiment analysis
 The **E-commerce Sentiment Analysis App** is an intelligent, web-based platform designed to analyze customer feedback from multiple e-commerce platforms. It helps businesses and researchers gain valuable insights into customer emotions, product satisfaction, and overall sentiment trends.  
 
 ---
-
 🔑 **Key Features**  
 - 🤖 **AI-Powered Sentiment Analysis**: Classifies reviews into **Positive, Negative, Neutral** using NLTK’s VADER model.  
 - 📈 **Graphical Insights**: Auto-generated **bar, pie, and line charts** for each platform.  
